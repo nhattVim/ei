@@ -104,8 +104,8 @@ Item {
                         anchors.verticalCenter: parent.verticalCenter
                         Text {
                             anchors.centerIn: parent
-                            text: ""
-                            font.pixelSize: 16
+                            text: ""
+                            font.pixelSize: 13
                             color: dashToggleMouse.containsMouse ? ThemeService.primary : ThemeService.foreground
                             opacity: dashToggleMouse.containsMouse ? 1.0 : 0.8
                             Behavior on color { ColorAnimation { duration: 150 } }

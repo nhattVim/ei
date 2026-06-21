@@ -23,8 +23,13 @@ PanelFrame {
         TogglePill {
             Layout.fillHeight: true
             Layout.preferredWidth: 48
-            icon: "󰂯"
-            active: false
+            icon: BluetoothService.icon
+            active: BluetoothService.enabled
+            busy: BluetoothService.busy
+            enabledState: BluetoothService.available && !BluetoothService.blocked
+            badgeText: BluetoothService.connectedCount > 0 ? BluetoothService.connectedCount.toString() : ""
+            tooltip: BluetoothService.statusText
+            onClicked: BluetoothService.toggle()
         }
 
         TogglePill {
